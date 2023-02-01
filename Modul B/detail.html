@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="styles/3.2.js"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            fontFamily: {
+                'pupi': ['"Poppins"', 'sans-serif']
+            }
+          }
+        }
+      </script>
+    <title>Title</title>
+</head>
+<body class="bg-[#0a193a] font-pupi">
+    <nav class=" transition-all duration-300 px-10 lg:px-16 py-5 flex items-center justify-between text-white fixed w-full">
+        <img src="assets/logo.png" class="w-[40px]" alt="">
+        <div class="sm:flex hidden items-center">
+            <p><a href="index.html">Home</a></p>
+            <p class="mx-7"><a href="explore.html">Explore</a></p>
+            <p><a href="">Create</a></p>
+        </div>
+        <button class="py-2 px-8 rounded-full bg-[#5261df] sm:block hidden">Login</button>
+        <img class="sm:hidden block z-10 burger" src="assets/hamburger.png" alt="">
+        <div class="w-0 transition-all duration-300 h-screen flex flex-col justify-center items-center overflow-hidden content-burger fixed bg-[#5261df] top-0 right-0">
+            <p class="mb-3"><a href="index.html">Home</a></p>
+            <p class="mb-3"><a href="explore.html">Explore</a></p>
+            <p><a href="">Create</a></p>
+        </div>
+    </nav>
+
+    <div class="pb-24 pt-28 text-white text-center px-10 xl:px-32">
+        <p class="text-3xl font-semibold mb-16">Detail NFT</p>
+
+        <div class="flex flex-wrap">
+            <img src="assets/zombie.jpg" class="rounded-lg w-[300px] object-cover lg:w-[400px] lg:mr-5 xl:mr-10" alt="">
+            <div class="text-start">
+                <p class="text-2xl font-semibold mt-2">Zombie Man</p>
+                <p class="text-sm text-gray-300 mb-2">By Dio Da</p>
+                <p class="mb-4">Category : <button class="py-2 px-5 ml-2 rounded-full text-sm bg-[#5261df]">Person</button></p>
+                <p class="mb-6 lg:w-[500px]">Nft Ini memiliki sebuah proses yang lorem ipsum dolor sit amet, Nft Ini memiliki sebuah proses yang lorem ipsum dolor sit amet. Nft Ini memiliki sebuah proses yang lorem ipsum dolor sit amet</p>
+                <button class="py-2 px-10 rounded-full bg-[#69a8d2]">Buy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#5261df] text-white flex flex-wrap items-center justify-between px-4 sm:px-24 py-10">
+        <div class="sm:mb-0 mb-4">
+            <img src="assets/logo.png" class="mb-3" alt="">
+            <p class="font-semibold text-xl ">Tornado Inc.</p>
+            <p class="w-[250px]">lorem ipsum dolor sit amet anjir banget cuyy</p>
+        </div>
+        <div class="sm:mb-0 mr-4 mb-4 sm:mr-0">
+            <p class="font-semibold text-xl mb-2">Our Services</p>
+            <p class="mb-2">Discover</p>
+            <p class="mb-2">Anjai</p>
+            <p>Mabar</p>
+        </div>
+        <div>
+            <p class="font-semibold text-xl mb-2">Our Contact</p>
+            <p class="mb-2">Discover</p>
+            <p class="mb-2">Anjai</p>
+            <p>Mabar</p>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.querySelector('nav').classList.toggle('bg-[#01102d]', window.scrollY > 0)
+            document.querySelector('nav').classList.toggle('py-3', window.scrollY > 0)
+        })
+
+        const contentBurger = document.querySelector('.content-burger')
+        document.querySelector('.burger').addEventListener('click', () => {
+            contentBurger.classList.toggle('w-[80vw]')
+        })
+    </script>
+</body>
+</html>
