@@ -11,38 +11,16 @@
 <div class="py-14 px-16 lg:px-48">
     <p class="text-white mb-5 font-medium text-xl">Latest NFT's</p>
     <div class="flex justify-center flex-wrap">
+        @foreach($nfts as $nft)
         <div class="rounded-lg bg-[#e5e5e5] mr-6 xl:mb-0 mb-4 w-max overflow-hidden">
-            <img src="assets/zombie.jpg" class="w-[280px]" alt="">
+            <img src="/storage/{{$nft->img}}" class="w-[280px]" alt="">
             <div class="p-4">
-                <p class="text-[#5261df]">Dio Da</p>
-                <p class="text-[#393534] text-lg font-medium mb-2">Mamang Zombbie</p>
-                <p class="text-[#7d726f]">$ 15,00</p>
+                <p class="text-[#5261df]">{{$nft->author}}</p>
+                <p class="text-[#393534] text-lg font-medium mb-2">{{$nft->name}}</p>
+                <p class="text-[#7d726f]">$ {{$nft->price}}</p>
             </div>
         </div>
-        <div class="rounded-lg bg-[#e5e5e5] mr-6 xl:mb-0 mb-4 w-max overflow-hidden">
-            <img src="assets/zombie.jpg" class="w-[280px]" alt="">
-            <div class="p-4">
-                <p class="text-[#5261df]">Dio Da</p>
-                <p class="text-[#393534] text-lg font-medium mb-2">Mamang Zombbie</p>
-                <p class="text-[#7d726f]">$ 15,00</p>
-            </div>
-        </div>
-        <div class="rounded-lg bg-[#e5e5e5] mr-6 xl:mb-0 mb-4 w-max overflow-hidden">
-            <img src="assets/zombie.jpg" class="w-[280px]" alt="">
-            <div class="p-4">
-                <p class="text-[#5261df]">Dio Da</p>
-                <p class="text-[#393534] text-lg font-medium mb-2">Mamang Zombbie</p>
-                <p class="text-[#7d726f]">$ 15,00</p>
-            </div>
-        </div>
-        <div class="rounded-lg bg-[#e5e5e5] xl:mr-0 mr-6 xl:mb-0 mb-4 w-max overflow-hidden">
-            <img src="assets/zombie.jpg" class="w-[280px]" alt="">
-            <div class="p-4">
-                <p class="text-[#5261df]">Dio Da</p>
-                <p class="text-[#393534] text-lg font-medium mb-2">Mamang Zombbie</p>
-                <p class="text-[#7d726f]">$ 15,00</p>
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
 
@@ -55,30 +33,12 @@
 <div class="py-16">
     <p class="text-2xl text-white font-semibold text-center mb-8">Search By Categories</p>
     <div class="flex flex-wrap xl:w-[1035px] w-full justify-center mx-auto">
+        @foreach($categories as $category)
         <div class="bg-[#a5b6e2] w-max rounded-lg overflow-hidden m-2 xl:m-4">
-            <img src="assets/hitam.jpg" alt="">
-            <p class="p-3 font-medium text-lg">Orang Hitam</p>
+            <img src="/storage/{{$category->thumb}}" alt="">
+            <p class="p-3 font-medium text-lg">{{$category->name}}</p>
         </div>
-        <div class="bg-[#a5b6e2] w-max rounded-lg overflow-hidden m-2 xl:m-4">
-            <img src="assets/hitam.jpg" alt="">
-            <p class="p-3 font-medium text-lg">Orang Hitam</p>
-        </div>
-        <div class="bg-[#a5b6e2] w-max rounded-lg overflow-hidden m-2 xl:m-4">
-            <img src="assets/hitam.jpg" alt="">
-            <p class="p-3 font-medium text-lg">Orang Hitam</p>
-        </div>
-        <div class="bg-[#a5b6e2] w-max rounded-lg overflow-hidden m-2 xl:m-4">
-            <img src="assets/hitam.jpg" alt="">
-            <p class="p-3 font-medium text-lg">Orang Hitam</p>
-        </div>
-        <div class="bg-[#a5b6e2] w-max rounded-lg overflow-hidden m-2 xl:m-4">
-            <img src="assets/hitam.jpg" alt="">
-            <p class="p-3 font-medium text-lg">Orang Hitam</p>
-        </div>
-        <div class="bg-[#a5b6e2] w-max rounded-lg overflow-hidden m-2 xl:m-4">
-            <img src="assets/hitam.jpg" alt="">
-            <p class="p-3 font-medium text-lg">Orang Hitam</p>
-        </div>
+        @endforeach
     </div>
 </div>
 @endsection

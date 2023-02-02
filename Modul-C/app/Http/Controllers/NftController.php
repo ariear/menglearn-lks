@@ -34,4 +34,10 @@ class NftController extends Controller
         flash()->addSuccess('Nft Berhasil Ditambahkan');
         return redirect('/explore');
     }
+
+    public function detail($id){
+        return view('detail',[
+            'nft' => Nft::firstWhere('id',$id)
+        ]);
+    }
 }

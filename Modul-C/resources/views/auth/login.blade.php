@@ -1,7 +1,7 @@
 @extends('template')
 @section('content')
 <div class="pb-32 pt-32 text-white text-center px-5 lg:px-10 xl:px-32 text-start">
-    <form method="POST" action="/login" class="bg-[#5261df] w-[450px] rounded-lg p-6 mx-auto">
+    <form method="POST" action="/login" class="bg-[#5261df] w-full sm:w-[450px] rounded-lg p-6 mx-auto">
         @csrf
         <p class="text-2xl mb-6 font-medium text-center">Login</p>
         <div class="flex flex-col mb-4">

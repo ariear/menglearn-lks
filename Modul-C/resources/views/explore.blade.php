@@ -7,14 +7,16 @@
     </form>
     <div class="flex flex-wrap justify-center">
         @foreach ($nfts as $nft)
-        <div class="rounded-lg bg-[#e5e5e5] mr-6 w-max overflow-hidden w-[290px] mb-4">
-            <img src="/storage/{{$nft->img}}" class="w-full" alt="">
-            <div class="p-4">
-                <p class="text-[#5261df]">{{$nft->author}}</p>
-                <p class="text-[#393534] text-lg font-medium mb-2">{{$nft->name}}</p>
-                <p class="text-[#7d726f]">$ {{$nft->price}}</p>
+        <a href="/nft/{{$nft->id}}">
+            <div class="rounded-lg bg-[#e5e5e5] mr-6 w-max overflow-hidden w-[290px] mb-4">
+                <img src="/storage/{{$nft->img}}" class="w-full" alt="">
+                <div class="p-4">
+                    <p class="text-[#5261df]">{{$nft->author}}</p>
+                    <p class="text-[#393534] text-lg font-medium mb-2">{{$nft->name}}</p>
+                    <p class="text-[#7d726f]">$ {{$nft->price}}</p>
+                </div>
             </div>
-        </div>
+        </a>
         @endforeach
     </div>
 </div>

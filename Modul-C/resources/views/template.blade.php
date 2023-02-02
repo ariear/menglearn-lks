@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>TOFAN</title>
     <script src="/scripts/3.2.js"></script>
     <script>
         tailwind.config = {
@@ -31,6 +31,12 @@
         const contentBurger = document.querySelector('.content-burger')
         document.querySelector('.burger').addEventListener('click', () => {
             contentBurger.classList.toggle('w-[80vw]')
+        })
+
+        const sapa = document.querySelector('.sapa')
+        const menu_auth = document.querySelector('.menu-auth')
+        sapa.addEventListener('click', () => {
+            menu_auth.classList.toggle('hidden')
         })
     </script>
 </body>
