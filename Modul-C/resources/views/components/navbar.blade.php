@@ -8,8 +8,11 @@
     @auth
     <div class="relative hidden sm:block">
         <p class="sapa">Halo , {{auth()->user()->name}}</p>
-        <div class="absolute hidden bg-[#5261df] p-3 rounded-lg -bottom-20 menu-auth">
+        <div class="absolute hidden bg-[#5261df] p-3 rounded-lg -bottom-28 menu-auth">
+            @can('admin')
             <p class="mb-2"><a href="/dashboard/nft">Dashboard</a></p>
+            @endcan
+            <p class="mb-2"><a href="/cart">Keranjang</a></p>
             <p><form action="/logout" method="post">@csrf <button type="submit">Logout</button></form></p>
         </div>
     </div>
@@ -25,7 +28,10 @@
         @auth
         <div class="relative">
             <div class="bg-[#5261df] p-3 rounded-lg -bottom-20">
+                @can('admin')
                 <p class="mb-2"><a href="/dashboard/nft">Dashboard</a></p>
+                @endcan
+                <p class="mb-2"><a href="/cart">Keranjang</a></p>
                 <p><form action="/logout" method="post">@csrf <button type="submit">Logout</button></form></p>
             </div>
         </div>

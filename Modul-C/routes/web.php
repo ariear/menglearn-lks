@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ExploreController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NftController;
@@ -24,6 +25,10 @@ Route::get('/', [HomeController::class,'index']);
 Route::get('/explore', [ExploreController::class,'index']);
 
 Route::get('/nft/{id}', [NftController::class,'detail']);
+
+Route::get('/cart', [CartController::class,'index'])->middleware('auth');
+Route::post('/cart/{id_nft}', [CartController::class,'store'])->middleware('auth');
+Route::delete('/cart/{id_nft}', [CartController::class,'delete'])->middleware('auth');
 
 Route::get('/login',[AuthController::class,'login'])->name('login')->middleware('guest');
 Route::get('/register',[AuthController::class,'register'])->middleware('guest');

@@ -11,7 +11,10 @@
                 <p class="text-sm text-yellow-300 mb-2">$ {{$nft->price}}</p>
                 <p class="mb-4">Category : <button class="py-2 px-5 ml-2 rounded-full text-sm bg-[#5261df]">{{$nft->category->name}}</button></p>
                 <p class="mb-6 lg:w-[500px]">{{$nft->desc}}</p>
-                <button class="py-2 px-10 rounded-full bg-[#69a8d2]">Buy</button>
+                <form action="/cart/{{$nft->id}}" method="post">
+                    @csrf
+                    <button type="submit" class="py-2 px-10 rounded-full bg-[#69a8d2]">Add To Cart</button>
+                </form>
             </div>
         </div>
 </div>
