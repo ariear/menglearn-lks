@@ -7,8 +7,21 @@
 </head>
 
 <body style="height: 100vh;background-image: url('../Resources/bg5.jpg');background-size: cover; background-position: top;">
-
+<button onclick="changeBackground()">Ubah Background</button>
 <canvas style="margin-left: 35%; border-radius: 10px;" id="viewport" width="628" height="628"></canvas></div>
-</body>
 
+<script>
+    let isChangeBg = false 
+    function changeBackground(){
+        const body = document.querySelector('body')
+        if (!isChangeBg) {
+            body.style.backgroundImage = "url('../Resources/bg6.jpg')"
+            isChangeBg = true
+        } else {
+            body.style.backgroundImage = "url('../Resources/bg5.jpg')"
+            isChangeBg = false 
+        }
+    }
+</script>
+</body>
 </html> 
